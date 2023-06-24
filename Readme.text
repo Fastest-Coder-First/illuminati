@@ -1,0 +1,57 @@
+
+
+# Personal Finance Tracker
+
+This is a simple web application for tracking personal finances. It allows users to add income and expense transactions and displays the current balance.
+
+## Table of Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- Add income and expense transactions
+- Display current balance
+- Categorize transactions as income or expense
+- View a list of all transactions, incomes, and expenses
+
+## Usage
+
+1. Open the `index.html` file in a web browser.
+2. Fill in the transaction details in the provided form: description, amount, and type (income or expense).
+3. Click the "Add Transaction" button to add the transaction.
+4. The current balance will be displayed at the top.
+5. Transactions will be categorized as incomes or expenses and displayed in their respective sections.
+6. All transactions will be listed in the "All Transactions" section.
+
+## Dependencies
+
+This application has the following dependencies:
+
+- [style.css](style.css): The CSS file for styling the web page.
+- [script.js](script.js): The JavaScript file for handling the application's functionality.
+
+## Installation
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd personal-finance-tracker`
+3. Open `index.html` in a web browser.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or want to add new features, please submit a pull request. 
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+This project was created with love by [Your Name].
+
+Feel free to customize the README file as per your specific requirements.
