@@ -20,13 +20,17 @@ function addTransaction(e) {
   const description = document.getElementById('description').value;
   const amount = parseFloat(document.getElementById('amount').value);
   const type = document.getElementById('type').value;
+  
+  // Get current date and time
+  const timestamp = new Date();
 
   // Create a new transaction object
   const transaction = {
     id: Date.now(),
     description,
     amount,
-    type
+    type,
+    timestamp
   };
 
   // Add the transaction to the array
@@ -61,9 +65,11 @@ function displayTransactions() {
   // Iterate through reversed transactions and create list items
   reversedTransactions.forEach(transaction => {
     const listItem = document.createElement('li');
+    const dateTime = new Date(transaction.timestamp).toLocaleString();
     listItem.innerHTML = `
-      <span>${transaction.description}</span>
-      <span class="${transaction.type}">${transaction.amount.toFixed(2)}</span>
+      <span class="ty">${transaction.description}</span>
+      <span class="${transaction.type}">₹${transaction.amount.toFixed(2)}</span>
+      <span class="timestamp">${dateTime}</span>
       <button onclick="deleteTransaction(${transaction.id})">Delete</button>
     `;
     transactionList.appendChild(listItem);
@@ -83,7 +89,7 @@ function displayIncomes() {
   // Iterate through incomes and create list items
   incomes.forEach(income => {
     const listItem = document.createElement('div');
-    listItem.textContent = `${income.description}: $${income.amount.toFixed(2)}`;
+    listItem.textContent = `${income.description}: ₹${income.amount.toFixed(2)}`;
     incomeList.appendChild(listItem);
   });
 }
@@ -101,7 +107,7 @@ function displayExpenses() {
   // Iterate through expenses and create list items
   expenses.forEach(expense => {
     const listItem = document.createElement('div');
-    listItem.textContent = `${expense.description}: $${expense.amount.toFixed(2)}`;
+    listItem.textContent = `${expense.description}: ₹${expense.amount.toFixed(2)}`;
     expenseList.appendChild(listItem);
   });
 }
@@ -133,7 +139,7 @@ function calculateBalance() {
     .filter(transaction => transaction.type === 'expense')
     .reduce((total, transaction) => total + transaction.amount, 0);
   const currentBalance = income - expense;
-  balance.textContent = `Current Balance: $${currentBalance.toFixed(2)}`;
+  balance.textContent = `Current Balance: ₹${currentBalance.toFixed(2)}`;
 }
 
 // Update local storage

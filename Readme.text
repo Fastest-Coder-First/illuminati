@@ -1,57 +1,31 @@
-
-
 # Personal Finance Tracker
 
-This is a simple web application for tracking personal finances. It allows users to add income and expense transactions and displays the current balance.
+![Personal Finance Tracker](screenshot.png)
 
-## Table of Contents
-
-- [Features](#features)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
+## Description
+The Personal Finance Tracker is a web-based application that helps users track their income and expenses. It allows users to add, edit, and delete transactions, and provides an overview of the current balance. This project was developed as part of the hackathon organized by [illuminati](https://github.com/Fastest-Coder-First/illuminati).
 
 ## Features
-
-- Add income and expense transactions
-- Display current balance
-- Categorize transactions as income or expense
-- View a list of all transactions, incomes, and expenses
+- Add income and expense transactions with a description and amount.
+- Categorize transactions as income, expense, or others.
+- View a list of incomes, expenses, and all transactions.
+- Edit or delete existing transactions.
+- Calculate and display the current balance.
+- Responsive user interface for an optimal viewing experience on different devices.
 
 ## Usage
+To use the Personal Finance Tracker, follow these steps:
 
-1. Open the `index.html` file in a web browser.
-2. Fill in the transaction details in the provided form: description, amount, and type (income or expense).
-3. Click the "Add Transaction" button to add the transaction.
-4. The current balance will be displayed at the top.
-5. Transactions will be categorized as incomes or expenses and displayed in their respective sections.
-6. All transactions will be listed in the "All Transactions" section.
+1. Clone the repository: `git clone https://github.com/Fastest-Coder-First/illuminati`
+2. Open the `index.html` file in your web browser.
+3. Enter a description, amount, and select the transaction type (income, expense, or others) in the provided input fields.
+4. Click the "Add Transaction" button to add the transaction to the list.
+5. View the list of incomes, expenses, and all transactions.
+6. To edit or delete a transaction, use the respective buttons provided.
+7. The current balance will be displayed at the top of the page.
 
-## Dependencies
-
-This application has the following dependencies:
-
-- [style.css](style.css): The CSS file for styling the web page.
-- [script.js](script.js): The JavaScript file for handling the application's functionality.
-
-## Installation
-
-1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd personal-finance-tracker`
-3. Open `index.html` in a web browser.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or want to add new features, please submit a pull request. 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgements
-
-This project was created with love by [Your Name].
-
-Feel free to customize the README file as per your specific requirements.
+## Contributors
+- [Vedant](https://github.com/VedantKCSE)
+- [Atharva](https://github.com/atharvai812)
+- [Pranav](https://github.com/Kalaskarpranav21)
+- [Sumedh](https://github.com/Joshisumedh)

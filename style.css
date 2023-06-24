@@ -2,8 +2,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f5f5;
-  /* background-image: url("/Assets/BG_FInTrack01.jpeg.jpg"); */
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
   display: block;
@@ -16,26 +15,20 @@ header {
   padding: 20px;
   height: auto;
   width: 95vw;
-  background-color: rgba(69, 221, 227, 0.753);
-  border-radius: 5px;
+  font-size: 24px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
   box-shadow: 0 5px 8px rgb(38, 42, 43);
   align-items: center;
 }
 
-h1{
-  font: bold;
-  font-size: 50px;
-  background-color:none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 .container {
   margin: 20px auto;
-  padding: 20px;
+  padding: 20px;  
   height: auto;
   width: 95vw;
-  background-color: rgba(255, 0, 0, 0.299);
-  border-radius: 5px;
+  background-color: rgb(255, 196, 0);
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(34, 111, 133, 0.1);
 }
 
@@ -44,18 +37,18 @@ h1{
   margin: 20px auto;
   padding: 20px;
   height: 100%;
-  background-color: rgba(255, 0, 0, 0.299);
+  background-color: rgba(26, 25, 25, 0.945);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
 .cont .container-all {
   margin: 20px auto;
   padding: 20px;
   height: 450px;
   width: 50vh;
-  background-color: rgba(9, 231, 247, 0.289);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(34, 111, 133, 0.1);
+  box-shadow: 0 2px 5px rgb(34, 111, 133);
   overflow: auto;
 }
 .cont .container-in {
@@ -63,7 +56,7 @@ h1{
   padding: 20px;
   height: 450px;
   width: 50vh;
-  background-color:rgba(0, 255, 170, 0.568);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(34, 111, 133, 0.1);
   overflow: auto;
@@ -73,7 +66,7 @@ h1{
   padding: 20px;
   height: 450px;
   width: 50vh;
-  background-color:rgba(0, 255, 170, 0.568);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(34, 111, 133, 0.1);
   overflow: auto;
@@ -83,7 +76,7 @@ h1{
 .cont .container-in div {
   color: #000000;
   font-weight: bold;
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .cont .container-ex div {
@@ -94,18 +87,18 @@ h1{
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #ffffff;
 }
 
 #balance {
   text-align: center;
-  font-size: 18px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
 form {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   margin-bottom: 20px;
 }
 
@@ -121,11 +114,21 @@ select {
 
 button {
   padding: 10px 20px;
-  background-color: #4caf50;
-  color: #ffffff;
+  background-color: rgb(0, 255, 251);
+  color: #000000;
   border: none;
+  font-weight: 400;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(30, 255, 0);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(34, 111, 133);
 }
 
 ul {
@@ -138,13 +141,36 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f2f2f2;
+  background-color: rgb(35, 33, 33);
   border-radius: 5px;
   margin-bottom: 10px;
+  color: #ffffff;
+}
+
+li > button{
+    background-color: #e5ff00;
+    color: #252121;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+li > button:hover{
+    background-color: #ff3700fe;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(34, 111, 133);
+}
+
+li > .ty{
+    color: aqua;
+    font-weight: 1400;
 }
 
 .income {
-  color: #4caf50;
+  color: #00ff08;
 }
 
 .expense {
@@ -153,8 +179,73 @@ li {
 .footer {
   align-items: center;
   justify-content: center;
-  background-color: #613b3b8e;
+  background-color: #ffffff;
   border-radius: 3px;
-  height: 35px;
-  padding: ;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
+
+.footer a{
+    color: #211d1d;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.footer a:hover{
+    color: rgb(241, 249, 248);
+    font-size: 18px;
+    background-color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    font-style: oblique;
+}
+
+.container-all::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  .container-all::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .container-all::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 255, 204);
+    outline: 1px solid rgb(0, 0, 0);
+  }
+
+  
+.container-in::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  .container-in::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  }
+   
+  .container-in::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 255, 204);
+    outline: 1px solid rgb(0, 0, 0);
+  }
+
+
+.container-ex::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  .container-ex::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .container-ex::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 255, 204);
+    outline: 1px solid rgb(0, 0, 0);
+  }
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
