@@ -24,7 +24,7 @@ header {
 
 .container {
   margin: 20px auto;
-  padding: 20px;  
+  padding: 20px;
   height: auto;
   width: 95vw;
   background-color: rgb(255, 196, 0);
@@ -33,7 +33,7 @@ header {
 }
 
 .cont {
-  display: flex;  
+  display: flex;
   margin: 20px auto;
   padding: 20px;
   height: 100%;
@@ -72,7 +72,6 @@ header {
   overflow: auto;
 }
 
-
 .cont .container-in div {
   color: #000000;
   font-weight: bold;
@@ -82,7 +81,7 @@ header {
 .cont .container-ex div {
   color: #000000;
   font-weight: bold;
-    font-size: 22px;
+  font-size: 22px;
 }
 
 h1 {
@@ -98,7 +97,7 @@ h1 {
 
 form {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -147,26 +146,26 @@ li {
   color: #ffffff;
 }
 
-li > button{
-    background-color: #e5ff00;
-    color: #252121;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+li > button {
+  background-color: #e5ff00;
+  color: #252121;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-li > button:hover{
-    background-color: #ff3700fe;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgb(34, 111, 133);
+li > button:hover {
+  background-color: #ff3700fe;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(34, 111, 133);
 }
 
-li > .ty{
-    color: aqua;
-    font-weight: 1400;
+li > .ty {
+  color: aqua;
+  font-weight: 1400;
 }
 
 .income {
@@ -187,65 +186,104 @@ li > .ty{
   box-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
-.footer a{
-    color: #211d1d;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 10px;
-    font-weight: bold;
-    text-decoration: underline;
+.footer a {
+  color: #211d1d;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: underline;
 }
-.footer a:hover{
-    color: rgb(241, 249, 248);
-    font-size: 18px;
-    background-color: #000000;
-    font-weight: bold;
-    border-radius: 5px;
-    font-style: oblique;
+.footer a:hover {
+  color: rgb(241, 249, 248);
+  font-size: 18px;
+  background-color: #000000;
+  font-weight: bold;
+  border-radius: 5px;
+  font-style: oblique;
 }
 
 .container-all::-webkit-scrollbar {
-    width: 10px;
-  }
-   
-  .container-all::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  .container-all::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 255, 204);
-    outline: 1px solid rgb(0, 0, 0);
-  }
-
-  
-.container-in::-webkit-scrollbar {
-    width: 1em;
-  }
-   
-  .container-in::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-  }
-   
-  .container-in::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 255, 204);
-    outline: 1px solid rgb(0, 0, 0);
-  }
-
-
-.container-ex::-webkit-scrollbar {
-    width: 1em;
-  }
-   
-  .container-ex::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  .container-ex::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 255, 204);
-    outline: 1px solid rgb(0, 0, 0);
-  }
-
-body::-webkit-scrollbar{
-    display: none;
+  width: 10px;
 }
 
+.container-all::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.container-all::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 255, 204);
+  outline: 1px solid rgb(0, 0, 0);
+}
+
+.container-in::-webkit-scrollbar {
+  width: 1em;
+}
+
+.container-in::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+.container-in::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 255, 204);
+  outline: 1px solid rgb(0, 0, 0);
+}
+
+.container-ex::-webkit-scrollbar {
+  width: 1em;
+}
+
+.container-ex::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.container-ex::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 255, 204);
+  outline: 1px solid rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: auto !important;
+    padding: 0.5rem;
+    max-height: fit-content!important;
+    min-width: unset ;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  form input[type="text"],
+  input[type="number"],
+  select {
+    margin: 4px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(34, 111, 133, 0.1);
+    width: 90vw;
+    padding: 10px;
+  }
+  .cont {
+    padding: 0.8rem;
+    display: block;
+  }
+  .cont .container-all {
+    padding: 1px;
+    width: 100%;
+  }
+  .cont .container-in {
+    width: 100%;
+    padding: 1px;
+  }
+  .cont .container-ex {
+    width: 100%;
+    padding: 1px;
+  }
+  form button{
+    width: 90vw;
+    
+  }
+}
