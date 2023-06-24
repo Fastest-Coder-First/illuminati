@@ -1,6 +1,8 @@
 # Personal Finance Tracker
 
-![Personal Finance Tracker](screenshot.png)
+## Screenshot
+![Personal Finance Tracker](https://github.com/Fastest-Coder-First/illuminati/assets/136078273/13c58cb3-cc66-4a73-9161-3d2d8e8496a8)
+
 
 ## Description
 The Personal Finance Tracker is a web-based application that helps users track their income and expenses. It allows users to add, edit, and delete transactions, and provides an overview of the current balance. This project was developed as part of the hackathon organized by [illuminati](https://github.com/Fastest-Coder-First/illuminati).
