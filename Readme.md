@@ -2,13 +2,13 @@
 
 Personal Finance Tracker is a web application designed to help individuals track their personal finances, including income, expenses, and overall balance. This README file provides an overview of the application, its architecture, and the usage of GitHub Copilot in its development.
 
-## ⚡ Features
-
-- Current balance display
-- Add new transactions with description, amount, and type (income, expense, or others)
-- Categorize transactions into incomes and expenses
-- View a list of all transactions
-- Responsive design for optimal viewing on different devices
+## ⚡Features
+- Add income and expense transactions with a description and amount.
+- Categorize transactions as income, expense, or others.
+- View a list of incomes, expenses, and all transactions.
+- Edit or delete existing transactions.
+- Calculate and display the current balance.
+- Responsive user interface for an optimal viewing experience on different devices.
 
 ## 📷 Screenshots
 
@@ -21,7 +21,18 @@ The Personal Finance Tracker web application follows a client-server architectur
 - Frontend: HTML, CSS, JavaScript
 - Backend: Not specified in the provided code
 
-## Usage of GitHub Copilot
+## ✋ Usage
+To use the Personal Finance Tracker, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/Fastest-Coder-First/illuminati`
+2. Open the `index.html` file in your web browser.
+3. Enter a description, amount, and select the transaction type (income, expense, or others) in the provided input fields.
+4. Click the "Add Transaction" button to add the transaction to the list.
+5. View the list of incomes, expenses, and all transactions.
+6. To edit or delete a transaction, use the respective buttons provided.
+7. The current balance will be displayed at the top of the page.
+
+## Usage of GitHub Copilot 🤖
 
 GitHub Copilot is an AI-powered code generation and completion tool that assists developers in writing code more efficiently. In the development of Personal Finance Tracker, GitHub Copilot can be used in various scenarios:
 
@@ -41,8 +52,10 @@ GitHub Copilot enhances the development process by accelerating code writing, re
 
 [Demo for The Personal Finance Tracker](https://fastest-coder-first.github.io/illuminati/)
 
-## Contributors
-- [Vedant](https://github.com/VedantKCSE)
+## 🧔 Contributors
+
+- [Vedant](https://github.com/VedantKCSE) [<img src="https://github.com/favicon.ico" height="20" width="20" />](https://github.com/VedantKCSE) [<img src="https://i.imgur.com/Yj2Zj3s.png" height="20" width="20" />](https://www.linkedin.com/in/vedant-kahalekar)
+
 - [Atharva](https://github.com/atharvai812)
-- [Pravna](https://github.com/kalaskarpranav21)
-- [Sumedh](https://github.com/joshisumedh)
+- [Pranav](https://github.com/Kalaskarpranav21)
+- [Sumedh](https://github.com/Joshisumedh)
