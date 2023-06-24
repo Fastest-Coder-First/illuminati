@@ -1,8 +1,8 @@
-# Personal Finance Tracker
+# 🧔 Personal Finance Tracker 💵
 
 Personal Finance Tracker is a web application designed to help individuals track their personal finances, including income, expenses, and overall balance. This README file provides an overview of the application, its architecture, and the usage of GitHub Copilot in its development.
 
-## Features
+## ⚡ Features
 
 - Current balance display
 - Add new transactions with description, amount, and type (income, expense, or others)
@@ -10,7 +10,7 @@ Personal Finance Tracker is a web application designed to help individuals track
 - View a list of all transactions
 - Responsive design for optimal viewing on different devices
 
-## Screenshots
+## 📷 Screenshots
 
 ![Personal Finance Tracker](https://github.com/Fastest-Coder-First/illuminati/assets/136078273/7efbaf28-7c1a-4ed1-b629-84d003779fde)
 
@@ -37,6 +37,12 @@ GitHub Copilot is an AI-powered code generation and completion tool that assists
 
 GitHub Copilot enhances the development process by accelerating code writing, reducing boilerplate code, and providing helpful suggestions for developers.
 
-## Demo
+## ⚡ Demo
 
 [Demo for The Personal Finance Tracker](https://fastest-coder-first.github.io/illuminati/)
+
+## Contributors
+- [Vedant](https://github.com/VedantKCSE)
+- [Atharva](https://github.com/atharvai812)
+- [Pravna](https://github.com/kalaskarpranav21)
+- [Sumedh](https://github.com/joshisumedh)
