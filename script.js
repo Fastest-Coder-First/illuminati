@@ -1,7 +1,7 @@
-// Transaction data
+
 let transactions = [];
 
-// Function to add a new transaction
+
 function addTransaction(description, amount, type) {
   const transaction = {
     description,
@@ -12,12 +12,12 @@ function addTransaction(description, amount, type) {
   transactions.push(transaction);
 }
 
-// Function to delete a transaction
+
 function deleteTransaction(index) {
   transactions.splice(index, 1);
 }
 
-// Function to update the balance
+
 function updateBalance() {
   let balance = 0;
 
@@ -32,7 +32,7 @@ function updateBalance() {
   document.getElementById("balance-amount").textContent = balance.toFixed(2);
 }
 
-// Function to display transactions
+
 function displayTransactions() {
   const list = document.getElementById("list");
   list.innerHTML = "";
@@ -49,7 +49,7 @@ function displayTransactions() {
   });
 }
 
-// Event listener for transaction form submission
+
 document.getElementById("transaction-form").addEventListener("submit", function(event) {
   event.preventDefault();
 
