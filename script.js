@@ -1,7 +1,7 @@
+// Transaction data
 let transactions = [];
-let currentBalance = 0;
 
-
+// Function to add a new transaction
 function addTransaction(description, amount, type) {
   const transaction = {
     description,
@@ -9,37 +9,30 @@ function addTransaction(description, amount, type) {
     type
   };
 
-  if (description !== '' && !isNaN(amount)) {
-    const transaction = new Transaction(type, description, amount);
-    transactions.push(transaction);
-    updateTransactionsList();
-    updateBalance();
-    clearForm();
-  }
+  transactions.push(transaction);
 }
 
-
+// Function to delete a transaction
 function deleteTransaction(index) {
   transactions.splice(index, 1);
 }
 
-
+// Function to update the balance
 function updateBalance() {
-  currentBalance = 0;
+  let balance = 0;
 
-  transactions.forEach((transaction) => {
-    if (transaction.type === 'income') {
-      currentBalance += transaction.amount;
-    } else if (transaction.type === 'expense') {
-      currentBalance -= transaction.amount;
+  transactions.forEach(transaction => {
+    if (transaction.type === "income") {
+      balance += transaction.amount;
+    } else if (transaction.type === "expense") {
+      balance -= transaction.amount;
     }
   });
 
-  const currentBalanceElement = document.getElementById('current-balance');
-  currentBalanceElement.textContent = currentBalance.toFixed(2);
+  document.getElementById("balance-amount").textContent = balance.toFixed(2);
 }
 
-
+// Function to display transactions
 function displayTransactions() {
   const list = document.getElementById("list");
   list.innerHTML = "";
@@ -56,7 +49,7 @@ function displayTransactions() {
   });
 }
 
-
+// Event listener for transaction form submission
 document.getElementById("transaction-form").addEventListener("submit", function(event) {
   event.preventDefault();
 
