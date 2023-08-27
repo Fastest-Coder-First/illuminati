@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Personal Finance Tracker</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <h1>Personal Finance Tracker</h1>
+  <head>
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+  </head>
 
-  <form id="transaction-form">
-    <h2>Add Transaction</h2>
-    <input type="text" id="description" placeholder="Description" required>
-    <input type="number" id="amount" placeholder="Amount" required>
-    <select id="type">
-      <option value="income">Income</option>
-      <option value="expense">Expense</option>
-    </select>
-    <button type="submit">Add</button>
-  </form>
-
-  <div id="transaction-list">
-    <h2>Transactions</h2>
-    <ul id="list"></ul>
-  </div>
-
-  <div id="balance">
-    <h2>Balance</h2>
-    <p id="balance-amount">0</p>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+  <body>
+    <header>
+      <h1>🧑‍🦰 Personal Finance Tracker 💵</h1>
+    </header>
+    <!--The Tracking Information is displayed here-->
+    <div class="container">
+      <!--Display the Balance-->
+      <div id="balance">Current Balance: ₹0.00</div>
+      <!-- Add transaction  -->
+      <div>
+        <form id="transactionForm">
+          <input
+            type="text"
+            id="description"
+            placeholder="Description"
+            required
+          />
+          <input type="number" id="amount" placeholder="Amount" required />
+          <select id="type" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+            <option value="Others">Others</option>
+          </select>
+          <button type="submit">Add Transaction</button>
+        </form>
+      </div>
+      <div class="cont">
+        <!--The Income List-->
+        <div class="container-in">
+          <h2 style="text-align: center">Incomes</h2>
+          <div id="incomeList"></div>
+        </div>
+        <!--The Expenses List-->
+        <div class="container-ex">
+          <h2 style="text-align: center">Expenses</h2>
+          <div id="expenseList"></div>
+        </div>
+        <!--The Trasection List with the time and date of addition-->
+        <div class="container-all">
+          <h2 style="text-align: center">All Transactions</h2>
+          <ul id="transactionList"></ul>
+        </div>
+      </div>
+      <div class="footer">
+        <center>
+          Made with ❤️ by <a href="https://github.com/Fastest-Coder-First/illuminati"> illumanati</a><br /><a href="https://github.com/VedantKCSE">Vedant</a>
+          , <a href="https://github.com/atharvai812">Atharva</a> , <a href="https://github.com/Kalaskarpranav21">Pranav</a> , <a href="https://github.com/Joshisumedh">Sumedh</a><br>
+          Open Source Copyright ©️2023
+        </center>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

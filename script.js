@@ -1,84 +1,148 @@
-let transactions = [];
-let balance = 0;
+// Retrieve transactions from local storage or initialize an empty array
+let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 
-// Load transactions from localStorage on page load
-document.addEventListener('DOMContentLoaded', function() {
-  if (localStorage.getItem('transactions')) {
-    transactions = JSON.parse(localStorage.getItem('transactions'));
-    updateBalance();
-    updateTransactionsList();
-  }
-});
+// Display transactions on page load
+displayTransactions();
 
-function addTransaction() {
+// Calculate and display the current balance, incomes, and expenses
+calculateBalance();
+displayIncomes();
+displayExpenses();
+
+// Add transaction event listener
+document.getElementById('transactionForm').addEventListener('submit', addTransaction);
+
+// Add transaction
+function addTransaction(e) {
+  e.preventDefault();
+
+  // Get user inputs
   const description = document.getElementById('description').value;
   const amount = parseFloat(document.getElementById('amount').value);
   const type = document.getElementById('type').value;
   
-  if (description.trim() === '' || isNaN(amount)) {
-    alert('Please enter valid values for description and amount.');
-    return;
-  }
-  
+  // Get current date and time
+  const timestamp = new Date();
+
+  // Create a new transaction object
   const transaction = {
-    description: description,
-    amount: amount,
-    type: type
+    id: Date.now(),
+    description,
+    amount,
+    type,
+    timestamp
   };
-  
+
+  // Add the transaction to the array
   transactions.push(transaction);
-  updateBalance();
-  updateTransactionsList();
-  saveTransactionsToLocalStorage();
-  
+
+  // Update local storage
+  updateLocalStorage();
+
+  // Clear form inputs
   document.getElementById('description').value = '';
   document.getElementById('amount').value = '';
+
+  // Display the updated transactions, incomes, and expenses
+  displayTransactions();
+  displayIncomes();
+  displayExpenses();
+
+  // Recalculate and display the current balance
+  calculateBalance();
 }
 
-function updateBalance() {
-  balance = 0;
-  
-  transactions.forEach(transaction => {
-    if (transaction.type === 'income') {
-      balance += transaction.amount;
-    } else if (transaction.type === 'expense') {
-      balance -= transaction.amount;
-    }
-  });
-  
-  const balanceElement = document.getElementById('balance');
-  balanceElement.textContent = 'Balance: $' + balance.toFixed(2);
-  
-  if (balance >= 0) {
-    balanceElement.style.color = 'green';
-  } else {
-    balanceElement.style.color = 'red';
-  }
-}
+// Display transactions
+function displayTransactions() {
+  const transactionList = document.getElementById('transactionList');
 
-function updateTransactionsList() {
-  const transactionsList = document.getElementById('transactions');
-  transactionsList.innerHTML = '';
-  
-  transactions.forEach((transaction, index) => {
+  // Clear the transaction list
+  transactionList.innerHTML = '';
+
+  // Reverse the transactions array to display the most recent transaction first
+  const reversedTransactions = transactions.slice().reverse();
+
+  // Iterate through reversed transactions and create list items
+  reversedTransactions.forEach(transaction => {
     const listItem = document.createElement('li');
+    const dateTime = new Date(transaction.timestamp).toLocaleString();
     listItem.innerHTML = `
-      <span class="${transaction.type}">${transaction.description}</span>
-      <span>${transaction.type === 'income' ? '+' : '-'}$${transaction.amount.toFixed(2)}</span>
-      <button onclick="deleteTransaction(${index})">Delete</button>
+      <span class="ty">${transaction.description}</span>
+      <span class="${transaction.type}">₹${transaction.amount.toFixed(2)}</span>
+      <span class="timestamp">${dateTime}</span>
+      <button onclick="deleteTransaction(${transaction.id})">Delete</button>
     `;
-    transactionsList.appendChild(listItem);
+    transactionList.appendChild(listItem);
   });
 }
 
-function deleteTransaction(index) {
-  transactions.splice(index, 1);
-  updateBalance();
-  updateTransactionsList();
-  saveTransactionsToLocalStorage();
+// Display incomes
+function displayIncomes() {
+  const incomeList = document.getElementById('incomeList');
+
+  // Clear the income list
+  incomeList.innerHTML = '';
+
+  // Filter transactions by income type
+  const incomes = transactions.filter(transaction => transaction.type === 'income');
+
+  // Iterate through incomes and create list items
+  incomes.forEach(income => {
+    const listItem = document.createElement('div');
+    listItem.textContent = `${income.description}: ₹${income.amount.toFixed(2)}`;
+    incomeList.appendChild(listItem);
+  });
 }
 
-// Save transactions to localStorage
-function saveTransactionsToLocalStorage() {
+// Display expenses
+function displayExpenses() {
+  const expenseList = document.getElementById('expenseList');
+
+  // Clear the expense list
+  expenseList.innerHTML = '';
+
+  // Filter transactions by expense type
+  const expenses = transactions.filter(transaction => transaction.type === 'expense');
+
+  // Iterate through expenses and create list items
+  expenses.forEach(expense => {
+    const listItem = document.createElement('div');
+    listItem.textContent = `${expense.description}: ₹${expense.amount.toFixed(2)}`;
+    expenseList.appendChild(listItem);
+  });
+}
+
+// Delete transaction
+function deleteTransaction(id) {
+  // Remove the transaction from the array
+  transactions = transactions.filter(transaction => transaction.id !== id);
+
+  // Update local storage
+  updateLocalStorage();
+
+  // Display the updated transactions, incomes, and expenses
+  displayTransactions();
+  displayIncomes();
+  displayExpenses();
+
+  // Recalculate and display the current balance
+  calculateBalance();
+}
+
+// Calculate and display the current balance
+function calculateBalance() {
+  const balance = document.getElementById('balance');
+  const income = transactions
+    .filter(transaction => transaction.type === 'income')
+    .reduce((total, transaction) => total + transaction.amount, 0);
+  const expense = transactions
+    .filter(transaction => transaction.type === 'expense')
+    .reduce((total, transaction) => total + transaction.amount, 0);
+  const currentBalance = income - expense;
+  balance.textContent = `Current Balance: ₹${currentBalance.toFixed(2)}`;
+}
+
+// Update local storage
+function updateLocalStorage() {
   localStorage.setItem('transactions', JSON.stringify(transactions));
 }
